@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSE | CDDI 2026</title>
+  <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+                script-src 'self' https://cdnjs.cloudflare.com;
+                font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+                img-src 'self' data: https:;
+                connect-src 'self' https: https://formspree.io;
+                media-src 'self';
+                worker-src 'none';
+                child-src 'none';
+                form-action 'self' https://formspree.io;
+                upgrade-insecure-requests;
+                block-all-mixed-content;
+                object-src 'none'; 
+                base-uri 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+  <meta name="robots" content="noimageindex" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/branding.css" />
+  <link rel="stylesheet" href="./assets/css/style-overrides.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/specs/form.css" />
+  <link rel="stylesheet" href="./assets/css/specs/security.css" />
+
+  <!-- Scripts -->
+  <script defer src="./assets/js/hero.js"></script>
+  <script defer src="./assets/js/language.js"></script>
+  <script defer src="./assets/js/security.js"></script>
+  <script defer src="./assets/js/form.js"></script>
+</head>
+
+<body>
+
+  <header>
+  <div class="container">
+    <div class="header-content">
+      <div class="header-left">
+        <img src="./assets/img/logo.png" alt="Logo FCEG" class="logo"/>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/cse.cddi/" target="_blank" aria-label="Instagram" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/cse.cddi" target="_blank" aria-label="Facebook" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cse2026cddi" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <!-- <a href="https://discord.gg/HV29q9Mn29" target="_blank" aria-label="Discord" class="social-icon">
+            <i class="fab fa-discord"></i>
+          </a> -->
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="lang-toggle">EN</button>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-en="Home" data-fr="Accueil"></a></li>
+        <li><a href="about.html" data-en="About" data-fr="À propos"></a></li>
+        <li><a href="schedule.html" data-en="Schedule" data-fr="Horaire"></a></li>
+        <li><a href="delegates.html" data-en="Delegates" data-fr="Délégations"></a></li>
+        <li><a href="sponsors.html" data-en="Sponsors" data-fr="Partenaires"></a></li>
+        <li><a href="contact.html" class="current" data-en="Contact" data-fr="Contact"></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1 data-en="Get in Touch" data-fr="Contactez-nous"></h1>
+        <p data-en="We'd love to hear from you!" data-fr="Nous serions ravi·e·s d’avoir de vos nouvelles !"></p>
+      </div>
+
+      <form action="https://formspree.io/f/xqabworl" method="POST" class="contact-form" id="contactForm">
+        <!-- Honeypot field (fully hidden) -->
+        <div class="hidden-field" aria-hidden="true">
+          <label for="honey">Do not fill this field</label>
+          <input type="text" name="_honey" id="honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Name and Email side-by-side -->
+        <div class="contact-row">
+          <div class="contact-half form-group">
+            <label for="name" data-en="Name" data-fr="Nom"></label>
+            <input type="text" id="name" name="name" required placeholder="Your Name / Votre nom">
+          </div>
+          <div class="contact-half form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+        </div>
+
+        <!-- Purpose dropdown with icons -->
+        <div class="form-group">
+          <label for="purpose" data-en="Reason for contacting us" data-fr="Raison de nous contacter"></label>
+          <select name="purpose" id="purpose" required>
+            <option value="" disabled selected data-en="Select a reason" data-fr="Sélectionnez une raison"></option>
+            <option value="Partner" data-en="Become a partner" data-fr="Devenir partenaire"></option>
+            <option value="Volunteer" data-en="Volunteer" data-fr="Devenir bénévole"></option>
+            <option value="Speaker" data-en="Become a speaker" data-fr="Devenir conférencier·ère"></option>
+            <option value="Technical" data-en="Technical issue" data-fr="Problème technique"></option>
+            <option value="Question" data-en="Question" data-fr="Question"></option>
+            <option value="Other" data-en="Other" data-fr="Autre"></option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="message" data-en="Message" data-fr="Message"></label>
+          <textarea id="message" name="message" required placeholder="Your message / Votre message"></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-button-center">
+          <button type="submit" class="btn" data-en="Send Message" data-fr="Envoyer le message"></button>
+        </div>
+      </form>
+
+      <!-- Success message (hidden by default) -->
+      <div id="success-message">
+        <div class="success-content">
+          <i class="fas fa-check-circle"></i>
+          <h2 data-en="Thank You!" data-fr="Merci !"></h2>
+          <p data-en="We've received your message and will get back to you soon." 
+             data-fr="Nous avons reçu votre message et vous répondrons bientôt."></p>
+        </div>
+      </div>
+      <!-- Error message (hidden by default) -->
+      <div id="error-message">
+        <div class="success-content">
+          <i class="fas fa-times-circle"></i>
+          <h2 data-en="Oops!" data-fr="Oups !"></h2>
+          <p data-en="There was a problem sending your message. Please try again later."
+             data-fr="Un problème est survenu lors de l’envoi de votre message. Veuillez réessayer plus tard."></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p data-en="&copy; 2026 CFES Conference. All rights reserved."
+         data-fr="&copy; 2026 Congrès de la FCEG. Tous droits réservés.">
+      </p>
+      <a href="terms.html" class="footer-link"
+        data-en="Terms of Use"
+        data-fr="Conditions d’utilisation">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

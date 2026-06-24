@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSE | CDDI 2026</title>
+  <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+                script-src 'self' https://cdnjs.cloudflare.com;
+                font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+                img-src 'self' data: https:;
+                connect-src 'self' https:;
+                media-src 'self';
+                worker-src 'none';
+                child-src 'none';
+                form-action 'self';
+                upgrade-insecure-requests;
+                block-all-mixed-content;
+                object-src 'none'; 
+                base-uri 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+  <meta name="robots" content="noimageindex" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/branding.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/specs/home.css" />
+  <link rel="stylesheet" href="./assets/css/specs/security.css" />
+  <link rel="stylesheet" href="./assets/css/style-overrides.css" />
+
+  <!-- Scripts -->
+  <script defer src="./assets/js/carousel.js"></script>
+  <script defer src="./assets/js/countdown.js"></script>
+  <script defer src="./assets/js/gallery.js"></script>
+  <script defer src="./assets/js/hero.js"></script>
+  <script defer src="./assets/js/language.js"></script>
+  <script defer src="./assets/js/security.js"></script>
+  <script defer src="./assets/js/tab.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="header-left">
+          <img src="./assets/img/logo.png" alt="Logo FCEG" class="logo"/>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cse.cddi/" target="_blank" aria-label="Instagram" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/cse.cddi" target="_blank" aria-label="Facebook" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/cse2026cddi" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- <a href="https://discord.gg/HV29q9Mn29" target="_blank" aria-label="Discord" class="social-icon">
+              <i class="fab fa-discord"></i>
+            </a> -->
+          </div>
+        </div>
+        <div class="header-right">
+          <button id="lang-toggle">EN</button>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="current" data-en="Home" data-fr="Accueil"></a></li>
+          <li><a href="about.html" data-en="About" data-fr="À propos"></a></li>
+          <li><a href="schedule.html" data-en="Schedule" data-fr="Horaire"></a></li>
+          <li><a href="delegates.html" data-en="Delegates" data-fr="Délégations"></a></li>
+          <li><a href="sponsors.html" data-en="Sponsors" data-fr="Partenaires"></a></li>
+          <li><a href="contact.html" data-en="Contact" data-fr="Contact"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 data-en="Welcome to CSE 2026" data-fr="Bienvenue à la CDDI 2026"></h1>
+      <p data-en="Join us for the Conference on Sustainability in Engineering (CSE), hosted at the University of Quebec at Trois-Rivières. This national event is dedicated to empowering the next generation of engineers to lead with responsibility and innovation. Over three days, you'll connect with passionate peers, attend thought-provoking talks, and participate in hands-on workshops—all focused on building a more sustainable future together."
+         data-fr="Participez au Congrès sur le développement durable en ingénierie (CDDI), organisé à l’Université du Québec à Trois-Rivières. Cet événement national vise à outiller la prochaine génération d’ingénieur·e·s pour qu’elle innove et agisse avec responsabilité. Pendant trois jours, rencontrez des pairs engagé·e·s, assistez à des conférences inspirantes et prenez part à des ateliers pratiques, tous axés sur la construction d’un avenir plus durable.">
+      </p>
+      <a class="btn" href="delegates.html" data-en="Register Now" data-fr="Inscrivez-vous"></a>
+      <a class="btn" href="about.html" data-en="Learn More" data-fr="En savoir plus"></a>
+    </div>
+  </section>
+
+  <section class="updates">
+    <div class="updates-container">
+      <h2 data-en="Latest Updates" data-fr="Dernières nouvelles"></h2>
+      <div class="carousel">
+        <div class="carousel-inner">
+
+        <!-- Volunteer -->
+        <div class="carousel-item active">
+          <h3 
+            data-en="Bring the Vision to Life — Volunteer at CSE 2026!" 
+            data-fr="Donnez vie à la vision — Bénévoles recherché·e·s pour la CDDI 2026 !">
+          </h3>
+          <p 
+            data-en="Be at the heart of the action by joining the volunteer team behind CSE 2026. Contribute to a landmark event, connect with passionate students from across the country, and develop valuable skills that last long after the final keynote." 
+            data-fr="Plongez au cœur de l’action en rejoignant l’équipe bénévole de la CDDI 2026. Contribuez à un événement marquant, rencontrez des étudiant·e·s engagé·e·s de partout au pays et développez des compétences précieuses qui vous suivront bien au-delà du congrès.">
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Become a Volunteer" data-fr="Devenez bénévole"></a>
+        </div>
+
+        <!-- Become a speaker -->
+        <div class="carousel-item">
+          <h3 
+            data-en="Share Your Expertise — Become a Speaker" 
+            data-fr="Partagez votre expertise — Devenez conférencier·ère">
+          </h3>
+          <p 
+            data-en="Inspire the next generation of engineers. If you're passionate about sustainability and innovation, we'd love to have you speak at CSE 2026." 
+            data-fr="Inspirez la prochaine génération d'ingénieur·e·s. Si vous êtes passionné·e par la durabilité et l'innovation, nous aimerions vous avoir comme conférencier·ère à la CDDI 2026."></p>
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Get in Touch" data-fr="Nous contacter"></a>
+        </div>
+
+        <!-- Become a partner -->
+        <div class="carousel-item">
+          <h3 
+            data-en="Connect With Tomorrow’s Leaders — Partner With Us" 
+            data-fr="Rencontrez la relève — Devenez notre partenaire">
+          </h3>
+          <p 
+            data-en="Showcase your organization at the forefront of sustainability and innovation. By partnering with CSE 2026, you’ll engage with ambitious student leaders, highlight your commitment to the future of engineering, and take part in a one-of-a-kind national gathering." 
+            data-fr="Mettez en valeur votre organisation au cœur des enjeux d’innovation et de durabilité. En vous associant à la CDDI 2026, vous entrerez en contact avec une relève étudiante ambitieuse, affirmerez votre engagement envers l’ingénierie de demain et participerez à un rassemblement unique à l’échelle nationale.">
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Let’s Collaborate" data-fr="Entrons en collaboration"></a>
+        </div>
+
+        <!-- Join the organizing committee -->
+        <div class="carousel-item">
+          <h3 
+            data-en="Lead the Movement — Join the CSE 2026 Organizing Committee" 
+            data-fr="Prenez les devants — Intégrez l’équipe du comité organisateur de la CDDI 2026">
+          </h3>
+          <p 
+            data-en="We're looking for bold and strategic minds to help organize CSE 2026. Step into the role of VP Partnerships, VP Logistics, or one of several director positions to support the team. Take charge of building innovative collaborations, managing event operations, growing your network, and shaping an event that will resonate across Canada." 
+            data-fr="Nous cherchons des esprits audacieux pour contribuer à l'organisation de la CDDI 2026. Prenez les rênes comme VP Partenariat, VP Logistique ou l'un des plusieurs postes de directeur·rice·s pour prêter main‑forte à l'équipe. Créez des collaborations innovantes, gérez les opérations de l'événement, élargissez votre réseau et façonnez un événement à portée nationale."></p>
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Apply" data-fr="Postulez"></a>
+        </div>
+
+          <!-- Stay posted for updates (last card) -->
+          <div class="carousel-item">
+            <h3 data-en="Stay posted for updates!" 
+              data-fr="Restez à l'affût des mises à jour !"></h3>
+            <p data-en="The website is under construction, but we are working hard to bring you the latest information about the upcoming event. Stay tuned for more details on speakers, workshops, and networking opportunities."
+               data-fr="Le site web est en construction, mais nous travaillons fort pour vous offrir les dernières informations sur le congrès. Restez à l'écoute pour plus de détails sur les conférenciers, les ateliers et les occasions de réseautage."></p>
+            <img src="./assets/img/logo.png" alt="Under Construction" class="construction-image">
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-indicator active" data-index="0"></div>
+        <div class="carousel-indicator" data-index="1"></div>
+        <div class="carousel-indicator" data-index="2"></div>
+        <div class="carousel-indicator" data-index="3"></div>
+        <div class="carousel-indicator" data-index="4"></div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="key-details">
+    <div class="container">
+      <h2 data-en="Key Informations" data-fr="Informations clés"></h2>
+      <div class="details-grid">
+        <div class="detail-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Date</h3>
+            <p data-en="Feb 27 – Mar 1, 2026" data-fr="Du 27 février au 1er mars 2026"></p>
+        </div>
+        <div class="detail-card">
+          <i class="fas fa-clock"></i>
+          <h3 data-en="Countdown" data-fr="Compte à rebours"></h3>
+          <p data-en="The conference begins in:" data-fr="Le congrès commence dans :"></p>
+          <div class="countdown" id="countdown-timer">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">0</span>
+              <span data-en="Days" data-fr="Jours"></span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">0</span>
+              <span data-en="Hours" data-fr="Heures"></span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">0</span>
+              <span data-en="Mins" data-fr="Mins"></span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">0</span>
+              <span data-en="Secs" data-fr="Secs"></span>
+            </div>
+          </div>
+        </div>
+        <div class="detail-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3 data-en="Location" data-fr="Lieu"></h3>
+            <p data-en="University of Quebec at Trois-Rivières" data-fr="Université du Québec à Trois-Rivières"></p>
+            <p data-en="3351 des Forges Blvd, Trois-Rivières, QC" data-fr="3351, boul. des Forges, Trois-Rivières, QC"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="sponsors">
+    <div class="container">
+      <h2 data-en="Official Sponsors" data-fr="Partenaires officiels"></h2>
+      <div class="sponsor-logos">
+        <a href="#"><img src="./assets/img/sponsors/uqtr.png" alt="UQTR"></a>
+      </div>
+      <a class="btn" href="sponsors.html" data-en="View All Sponsors" data-fr="Voir tous nos partenaires"></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p data-en="&copy; 2026 CFES Conference. All rights reserved."
+         data-fr="&copy; 2026 Congrès de la FCEG. Tous droits réservés.">
+      </p>
+      <a href="terms.html" class="footer-link"
+        data-en="Terms of Use"
+        data-fr="Conditions d’utilisation">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* === CSE.CDDI 2026 BRANDING STYLES === */
+
+/* === FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  /* === COLORS === */
+  --cse-teal: #008080;
+  --cse-orange: #FF7A00;
+  --cse-green: #00760F;
+  --cse-blue: #000080;
+  --cse-success: #28a745;
+  --cse-error: #FF0000;
+  --cse-white: #ffffff;
+  --cse-light-gray: #f6f6f6;
+  --cse-gray: #606060;
+  --cse-black: #000000;
+
+  /* === TITLES === */
+  --cse-title-font: 'Roboto Condensed', sans-serif;
+  --cse-title-color: var(--cse-blue);
+  --cse-title-size: clamp(2.5rem, 5vw, 3rem);
+  --cse-title-align: center;
+  --cse-title-margin: 0 0 1rem 0;
+
+  /* === SUBTITLES === */
+  --cse-subtitle-font: 'Poppins', sans-serif;
+  --cse-subtitle-color: var(--cse-teal);
+  --cse-subtitle-size: clamp(1.6rem, 3vw, 2rem);
+  --cse-subtitle-align: center;
+  --cse-subtitle-margin: 1rem 0 0.5rem 0;
+
+  --cse-subtitle2-size: clamp(1.2rem, 2.5vw, 1.2rem);
+  --cse-subtitle2-margin: -1rem 0 0.5rem 0;
+
+  /* === BODY === */
+  --cse-body-font: 'Lato', sans-serif;
+  --cse-body-color: var(--cse-black);
+  --cse-body-size: clamp(1rem, 2vw, 1.2rem);
+  --cse-body-size-small: clamp(0.9rem, 2vw, 1rem);
+  --cse-body-align: center;
+  --cse-body-margin: 0 0 1rem 0;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --cse-title-size: clamp(1.5rem, 6vw, 2rem);
+    --cse-subtitle-size: clamp(1.1rem, 4vw, 1.3rem);
+    --cse-subtitle2-size: clamp(1rem, 3vw, 1rem);
+    --cse-body-size: clamp(0.9rem, 3vw, 1rem);
+    --cse-body-size-small: clamp(0.8rem, 3vw, 0.9rem);
+  }
+}

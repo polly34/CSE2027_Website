@@ -1,0 +1,221 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  min-height: 10px;
+  container-type: inline-size;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.gallery-slide {
+  min-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensure slides don't shrink */
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.gallery-slide img {
+  max-width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 1rem auto 0 auto;
+  /* Add transition for smooth loading */
+  transition: opacity 0.3s ease;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--cse-white);
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--cse-blue);
+  border: 2px solid var(--cse-blue);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.gallery-arrow:hover {
+  opacity: 0.8;
+  border: 2px solid var(--cse-white);
+  background: var(--cse-orange);
+  color: var(--cse-white);
+}
+
+.gallery-arrow.prev {
+  left: 20px;
+}
+
+.gallery-arrow.next {
+  right: 20px;
+}
+
+.gallery-arrow.prev::before {
+  content: '‹';
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+}
+
+.gallery-arrow.next::before {
+  content: '›';
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+}
+
+.gallery-preview {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40vh; /* Match exact height of main image */
+  z-index: 5;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /* Width adjusts based on image aspect ratio */
+  width: auto;
+  max-width: 120px;
+  /* Add border-radius to container to ensure all corners are rounded */
+  border-radius: 8px;
+}
+
+.gallery-preview img {
+  width: auto;
+  height: 40vh; /* Force exact height to match main image */
+  max-height: 40vh;
+  min-height: 40vh;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery-preview-prev {
+  left: calc(50% - 40vh * 0.75 - 1rem - 120px); /* Position 1rem left of main image area */
+  justify-content: flex-end;
+  transform: translateY(-50%);
+}
+
+.gallery-preview-prev img {
+  object-position: center;
+}
+
+.gallery-preview-next {
+  right: calc(50% - 40vh * 0.75 - 1rem - 120px); /* Position 1rem right of main image area */
+  justify-content: flex-start;
+  transform: translateY(-50%);
+}
+
+.gallery-preview-next img {
+  object-position: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .gallery-preview {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-preview {
+    max-width: 80px;
+    opacity: 0.4;
+    border-radius: 6px; /* Slightly smaller radius for smaller screens */
+  }
+  
+  .gallery-preview img {
+    height: 40vh; /* Keep same height as main image */
+    min-height: 40vh;
+    border-radius: 6px;
+  }
+  
+  .gallery-preview-prev {
+    left: calc(50% - 40vh * 0.75 - 1rem - 80px); /* Adjust for smaller preview width */
+    transform: translateY(-50%);
+  }
+  
+  .gallery-preview-next {
+    right: calc(50% - 40vh * 0.75 - 1rem - 80px); /* Adjust for smaller preview width */
+    transform: translateY(-50%);
+  }
+}
+
+/* Hide previews on narrow screens to prevent overlap */
+@media (max-width: 640px) {
+  .gallery-preview {
+    display: none;
+  }
+}
+
+/* Hide previews when calculated position would be off-screen */
+@media (max-width: calc(40vh * 1.5 + 2rem + 240px)) {
+  .gallery-preview {
+    display: none;
+  }
+}
+
+/* Alternative: Hide previews based on aspect ratio for very narrow screens */
+@media (max-aspect-ratio: 3/4) {
+  .gallery-preview {
+    display: none;
+  }
+}
+
+/* Hide previews if container is too narrow (prevents overlap with arrows and content) */
+@container (max-width: 600px) {
+  .gallery-preview {
+    display: none;
+  }
+}
+
+/* Fallback for browsers without container query support */
+@supports not (container-type: inline-size) {
+  @media (max-width: 600px) {
+    .gallery-preview {
+      display: none;
+    }
+  }
+}
+
+/* Hover effects for better interaction */
+.gallery:hover .gallery-preview {
+  opacity: 0.8;
+}
+
+.gallery-preview:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Ensure arrows have higher z-index than previews */
+.gallery-arrow {
+  z-index: 15;
+}
