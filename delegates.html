@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
   <meta charset="UTF-8" />
@@ -33,539 +33,235 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/branding.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/style-overrides.css" />
-  <link rel="stylesheet" href="./assets/css/specs/delegates.css" />
-  <link rel="stylesheet" href="./assets/css/specs/document.css" />
+  <link rel="stylesheet" href="./assets/css/specs/home.css" />
   <link rel="stylesheet" href="./assets/css/specs/security.css" />
+  <link rel="stylesheet" href="./assets/css/style-overrides.css" />
 
   <!-- Scripts -->
+  <script defer src="./assets/js/carousel.js"></script>
+  <script defer src="./assets/js/countdown.js"></script>
+  <script defer src="./assets/js/gallery.js"></script>
   <script defer src="./assets/js/hero.js"></script>
+  <script defer src="./assets/js/hero-parallax.js"></script>
   <script defer src="./assets/js/language.js"></script>
   <script defer src="./assets/js/security.js"></script>
-  <script defer src="./assets/js/accordion.js"></script>
+  <script defer src="./assets/js/tab.js"></script>
 </head>
 
 <body>
-
   <header>
-  <div class="container">
-    <div class="header-content">
-      <div class="header-left">
-        <img src="./assets/img/logo.png" alt="Logo FCEG" class="logo"/>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/cse.cddi/" target="_blank" aria-label="Instagram" class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/cse.cddi" target="_blank" aria-label="Facebook" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/cse2026cddi" target="_blank" aria-label="LinkedIn" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <!-- <a href="https://discord.gg/HV29q9Mn29" target="_blank" aria-label="Discord" class="social-icon">
-            <i class="fab fa-discord"></i>
-          </a> -->
-        </div>
-      </div>
-      <div class="header-right">
-        <button id="lang-toggle">EN</button>
-        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      </div>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" data-en="Home" data-fr="Accueil"></a></li>
-        <li><a href="about.html" data-en="About" data-fr="À propos"></a></li>
-        <li><a href="schedule.html" data-en="Schedule" data-fr="Horaire"></a></li>
-        <li><a href="delegates.html" class="current" data-en="Delegates" data-fr="Délégations"></a></li>
-        <li><a href="sponsors.html" data-en="Sponsors" data-fr="Partenaires"></a></li>
-        <li><a href="contact.html" data-en="Contact" data-fr="Contact"></a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-    
-    <section class="hero">
-      <div class="container">
-        <h1 data-en="Documents" data-fr="Documents"></h1>
-        <p data-en="Welcome to the delegate resources section! Here, you will find essential documents designed to guide you through every step of your CSE experience. These resources include detailed information about the event, preparation tips, and important guidelines to ensure you make the most of your participation. When you click to download a document, it will automatically match the language currently displayed on the website. If a download button does not appear, it means the document is not yet available—please check back soon for updates."
-           data-fr="Bienvenue dans la section des ressources pour les délégué·e·s ! Vous trouverez ici des documents essentiels conçus pour vous accompagner à chaque étape de votre expérience à la CDDI. Ces ressources incluent des informations détaillées sur l’événement, des conseils de préparation et des directives importantes pour profiter pleinement de votre participation. Lorsque vous téléchargez un document, il sera automatiquement dans la langue actuellement affichée sur le site web. Si aucun bouton de téléchargement n’est affiché, cela signifie que le document n’est pas encore disponible — revenez bientôt pour les mises à jour."></p>
-        <div class="documents-columns">
-          <div class="document-card">
-            <div class="document-icon">
-              <i class="fas fa-file-pdf"></i>
-            </div>
-            <div class="document-desc" data-en="Pre-Delegate Package" data-fr="Trousse pré-délégué·e"></div>
-            <a href="#" class="btn" target="_blank" rel="noopener"
-                data-en="./assets/doc/pre-delegate-package-en.pdf"
-                data-fr="./assets/doc/pre-delegate-package-fr.pdf">
-                <i class="fas fa-download"></i>
-                <span data-en="Download" data-fr="Télécharger"></span>
-            </a> 
-          </div>
-          <div class="document-card">
-            <div class="document-icon">
-              <i class="fas fa-file-pdf"></i>
-            </div>
-            <div class="document-desc" data-en="Delegate Package" data-fr="Trousse du·de la délégué·e"></div>
-            <!-- 
-            <a href="#" class="btn" target="_blank" rel="noopener"
-                data-en="./assets/doc/delegate-package-en.pdf"
-                data-fr="./assets/doc/delegate-package-fr.pdf"> 
-                <i class="fas fa-download"></i>
-                <span data-en="Download" data-fr="Télécharger"></span>
+    <div class="container">
+      <div class="header-content">
+        <div class="header-left">
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cse.cddi/" target="_blank" aria-label="Instagram" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/cse.cddi" target="_blank" aria-label="Facebook" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/cse2026cddi" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- <a href="https://discord.gg/HV29q9Mn29" target="_blank" aria-label="Discord" class="social-icon">
+              <i class="fab fa-discord"></i>
             </a> -->
           </div>
         </div>
+        <div class="header-right">
+          <button id="lang-toggle">EN</button>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
       </div>
-    </section>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="current" data-en="Home" data-fr="Accueil"></a></li>
+          <li><a href="about.html" data-en="About" data-fr="À propos"></a></li>
+          <li><a href="schedule.html" data-en="Schedule" data-fr="Horaire"></a></li>
+          <li><a href="delegates.html" data-en="Delegates" data-fr="Délégations"></a></li>
+          <li><a href="sponsors.html" data-en="Sponsors" data-fr="Partenaires"></a></li>
+          <li><a href="contact.html" data-en="Contact" data-fr="Contact"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-      <div class="container">
-        <h1 data-en="Important Dates" data-fr="Dates importantes"></h1>
-        <p data-en="Mark your calendar! Below are the key dates for the CDDI 2026 conference, from pre-registration through the main event. Make sure to stay on top of these deadlines to ensure you don't miss out on this incredible opportunity."
-           data-fr="Marquez votre calendrier ! Ci-dessous se trouvent les dates clés du congrès CDDI 2026, de la pré-inscription jusqu'à l'événement principal. Assurez-vous de respecter ces échéances pour ne pas manquer cette occasion extraordinaire."></p>
-        <div class="documents-columns">
-          <div class="document-card">
-            <div class="document-icon">
-              <i class="fas fa-hourglass-start"></i>
-            </div>
-            <div class="document-desc" data-en="Pre-Registration" data-fr="Pré-inscription"></div>
-            <p data-en="November 17, 2025 to December 15, 2025" data-fr="17 novembre 2025 au 15 décembre 2025"></p>
-            </div>
-            <div class="document-card">
-            <div class="document-icon">
-              <i class="fas fa-hourglass-half"></i>
-            </div>
-            <div class="document-desc" data-en="Registration" data-fr="Inscription"></div>
-            <p data-en="December 16, 2025 to January 15, 2026" data-fr="16 décembre 2025 au 15 janvier 2026"></p>
-            </div>
-            <div class="document-card">
-            <div class="document-icon">
-              <i class="fas fa-hourglass-end"></i>
-            </div>
-            <div class="document-desc" data-en="Event" data-fr="Événement"></div>
-            <p data-en="February 27, 2026 to March 1, 2026" data-fr="27 février 2026 au 1er mars 2026"></p>
-            </div>
-        </div>
-      </div>
-    </section>
+  <section class="hero" id="hero">
+    <div class="hero-sticky" id="heroSticky">
 
-    <section class="delegate-cards-section">
-      <div class="container">
-        <div class="delegate-cards-container">
-          <div class="delegate-card">
-            <i class="fas fa-users"></i>
-            <div class="delegate-card-title">
-              <h3 data-en="Who Should Attend?" data-fr="Qui devrait participer ?"></h3>
-            </div>
-            <ul>
-                <li data-en="Undergraduate Students: If you are passionate about engineering and eager to help shape the road to sustainability, this conference is for you! Only undergraduate students enrolled in an engineering program whose student association is a member of the CFES (Canadian Federation of Engineering Students) can register as delegates and fully experience the event." 
-                    data-fr="Étudiant·e·s de premier cycle : Si vous êtes passionné·e par l’ingénierie et souhaitez contribuer à bâtir un avenir durable, ce congrès est pour vous ! Seuls les étudiant·e·s de premier cycle inscrit·e·s dans un programme de génie dont l'association étudiante est membre de la FCEG (Fédération canadienne étudiante en génie) peuvent s’inscrire comme délégué·e·s et vivre l’événement sans restriction.">
-                <li data-en="Professionals: Are you an industry leader or engineer committed to sustainable solutions? Join us as a speaker or represent your organization as a sponsor to inspire and connect with the next generation of changemakers." data-fr="Professionnel·le·s : Vous êtes un·e leader de l’industrie ou un·e ingénieur·e engagé·e pour la durabilité ? Participez comme conférencier·ère ou représentant·e de partenaire pour inspirer et échanger avec la relève en ingénierie."></li>
-            </ul>
-          </div>
-          <div class="delegate-card">
-            <i class="fas fa-gift"></i>
-            <div class="delegate-card-title">
-              <h3 data-en="Why Attend?" data-fr="Pourquoi participer ?"></h3>
-            </div>
-            <ul>
-              <li data-en="Expand your network: Meet peers, professionals, and leaders from across Canada." data-fr="Élargissez votre réseau : rencontrez des pairs, des professionnel·le·s et des leaders de partout au Canada."></li>
-              <li data-en="Engage with peers: Participate in workshops, discussions, and collaborative projects." data-fr="Échangez avec des pairs : participez à des ateliers, des discussions et des projets collaboratifs."></li>
-              <li data-en="Gain new perspectives: Discover innovative ideas and best practices in engineering and sustainability." data-fr="Découvrez de nouveaux points de vue : explorez des idées novatrices et des pratiques exemplaires en ingénierie et développement durable."></li>
-              <li data-en="Make lasting connections: Build relationships that extend beyond the event." data-fr="Créez des liens durables : nouez des relations qui perdureront après l’événement."></li>
-            </ul>
-          </div>
-          <div class="delegate-card">
-            <i class="fas fa-check-circle"></i>
-            <div class="delegate-card-title">
-              <h3 data-en="What’s Included?" data-fr="Ce qui est inclus"></h3>
-            </div>
-            <ul>
-              <li data-en="Accommodation: Comfortable hotel stay for the duration of the event." data-fr="Hébergement : séjour confortable à l’hôtel pendant toute la durée de l’événement."></li>
-              <li data-en="Transportation: Group transportation between venues and activities." data-fr="Transport : déplacements de groupe entre les lieux et les activités."></li>
-              <li data-en="Events & Activities: Access to all sessions, workshops, and social events." data-fr="Événements et activités : accès à toutes les séances, ateliers et activités sociales."></li>
-              <li data-en="Meals: Breakfasts, lunches, and dinners provided throughout the conference." data-fr="Repas : déjeuners, dîners et soupers inclus pendant le congrès."></li>
-              <li data-en="Delegate Kit: Welcome package with essential materials and souvenirs." data-fr="Trousse du·de la délégué·e : matériel essentiel et souvenirs remis à l’arrivée."></li>
-            </ul>
-          </div>
+      <div class="hero-bg" style="background-image:url('./assets/img/hero-montreal.jpg')"></div>
+
+      <div class="hero-header" id="heroHeader">
+        <svg class="hero-waves" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+          <path class="wave-purple" d="M0,0 L1440,0 L1440,120 C1200,180 900,60 720,90 C480,130 240,40 0,110 Z"></path>
+          <path class="wave-blue"   d="M0,40 C240,120 480,30 720,100 C900,150 1200,80 1440,120 L1440,0 L0,0 Z"></path>
+          <path class="wave-green"  d="M0,60 C240,150 480,60 720,140 C900,190 1200,110 1440,150 L1440,0 L0,0 Z"></path>
+        </svg>
+
+        <div class="hero-title-wrap">
+          <img src="./assets/img/cse27-logo.png" alt="CSE 27 logo" class="hero-logo" />
+          <h1 data-en="Welcome to CSE 2026" data-fr="Bienvenue à la CDDI 2026"></h1>
         </div>
       </div>
-    </section>
-  
-    <section class="logistics-section">
-      <div class="container">
-        <h2 data-en="Travel & Logistics" data-fr="Transport et logistique"></h2>
-        <div class="logistics-cards-container">
-          <div class="logistics-card">
-            <i class="fas fa-plane"></i>
-            <div class="logistics-card-title">
-              <h3 data-en="Airport to Hotel" data-fr="Aéroport à l'hôtel"></h3>
-            </div>
-            <div class="logistics-content">
-              <p data-en="Getting from Montreal-Trudeau Airport (YUL) to Trois-Rivières is straightforward with several transportation options available." data-fr="Se rendre de l'aéroport Montréal-Trudeau (YUL) à Trois-Rivières est simple grâce à plusieurs options de transport."></p>
-              <div class="logistics-info">
-                <h4 data-en="Disclaimer" data-fr="Avertissement"></h4>
-                <ul>
-                  <li data-en="The information provided here is for general guidance only and may not be fully accurate or up to date." data-fr="Les informations présentées ici sont à titre indicatif seulement et peuvent ne pas être entièrement exactes ou à jour."></li>
-                  <li data-en="Delegations are strongly encouraged to conduct their own research and verify all travel details before making arrangements." data-fr="Les délégations sont fortement encouragées à effectuer leurs propres recherches et à vérifier tous les détails de voyage avant de prendre des dispositions."></li>
-                  <li data-en="This section is intended to give a general idea of available options, but actual schedules, prices, and services may vary." data-fr="Cette section vise à donner une idée générale des options disponibles, mais les horaires, prix et services réels peuvent varier."></li>
-                </ul>
-              </div>
-              <div class="logistics-table-container">
-                <table class="logistics-table">
-                  <thead>
-                    <tr>
-                      <th data-en="Transportation" data-fr="Transport"></th>
-                      <th data-en="Duration" data-fr="Durée"></th>
-                      <th data-en="Cost (CAD)" data-fr="Coût (CAD)"></th>
-                      <th data-en="Details" data-fr="Détails"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong data-en="🚌 FlixBus Direct" data-fr="🚌 FlixBus direct"></strong>
-                      </td>
-                      <td data-en="2h 10min" data-fr="2h 10min"></td>
-                      <td>$35-55</td>
-                      <td data-en="Montreal to Trois-Rivières direct service" data-fr="Service direct Montréal vers Trois-Rivières"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚌 Public Transit + Bus" data-fr="🚌 Transport en commun + autobus"></strong>
-                      </td>
-                      <td data-en="3-4 hours" data-fr="3-4 heures"></td>
-                      <td>$45-65</td>
-                      <td data-en="YUL-Downtown Montreal ($10) + FlixBus ($35-55)" data-fr="YUL-Centre-ville Montréal (10 $) + FlixBus (35-55 $)"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚆 VIA Rail" data-fr="🚆 VIA Rail"></strong>
-                      </td>
-                      <td data-en="3 hours" data-fr="3 heures"></td>
-                      <td>$55-125</td>
-                      <td data-en="Airport to Central Station ($10-40) + Train ($45-85)" data-fr="Aéroport vers Gare centrale (10-40 $) + Train (45-85 $)"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚗 Rental Car" data-fr="🚗 Voiture de location"></strong>
-                      </td>
-                      <td data-en="1h 50min" data-fr="1h 50min"></td>
-                      <td>$85-115</td>
-                      <td data-en="150 km via Autoroute 40 E + gas" data-fr="150 km via Autoroute 40 E + essence"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚖 Taxi/Rideshare" data-fr="🚖 Taxi/Covoiturage"></strong>
-                      </td>
-                      <td data-en="2 hours" data-fr="2 heures"></td>
-                      <td>$180-220</td>
-                      <td data-en="Direct door-to-door service" data-fr="Service direct porte-à-porte"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="logistics-card">
-            <i class="fas fa-route"></i>
-            <div class="logistics-card-title">
-              <h3 data-en="Getting Around Trois-Rivières" data-fr="Se déplacer à Trois-Rivières"></h3>
-            </div>
-            <div class="logistics-content">
-              <p data-en="Once you arrive in Trois-Rivières, several transportation options are available to get around the city and between conference venues." data-fr="Une fois arrivé·e à Trois-Rivières, plusieurs options de transport sont disponibles pour se déplacer en ville et entre les lieux du congrès."></p>
-              
-              <div class="logistics-table-container">
-                <table class="logistics-table">
-                  <thead>
-                    <tr>
-                      <th data-en="Transportation" data-fr="Transport"></th>
-                      <th data-en="Coverage" data-fr="Couverture"></th>
-                      <th data-en="Cost (CAD)" data-fr="Coût (CAD)"></th>
-                      <th data-en="Best For" data-fr="Idéal pour"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong data-en="🚐 Conference Shuttle" data-fr="🚐 Navette du congrès"></strong>
-                      </td>
-                      <td data-en="Hotel ↔ Venues" data-fr="Hôtel ↔ Lieux"></td>
-                      <td data-en="Free" data-fr="Gratuit"></td>
-                      <td data-en="Conference events" data-fr="Événements du congrès"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚌 STTR City Bus" data-fr="🚌 Autobus STTR"></strong>
-                      </td>
-                      <td data-en="Citywide + UQTR" data-fr="Ville entière + UQTR"></td>
-                      <td data-en="$3.60-4.00 / $10.85 day" data-fr="3,60-4,00 $ / 10,85 $ jour"></td>
-                      <td data-en="City exploration" data-fr="Exploration de la ville"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚶‍♂️ Walking" data-fr="🚶‍♂️ À pied"></strong>
-                      </td>
-                      <td data-en="Downtown (2-4 km)" data-fr="Centre-ville (2-4 km)"></td>
-                      <td data-en="Free" data-fr="Gratuit"></td>
-                      <td data-en="Nearby venues, sightseeing" data-fr="Lieux proches, tourisme"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚴‍♂️ Cycling" data-fr="🚴‍♂️ À vélo"></strong>
-                      </td>
-                      <td data-en="Downtown + bike lanes" data-fr="Centre-ville + pistes cyclables"></td>
-                      <td data-en="Free" data-fr="Gratuit"></td>
-                      <td data-en="Active transportation, river paths" data-fr="Transport actif, sentiers fluviaux"></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong data-en="🚖 Taxi/Uber" data-fr="🚖 Taxi/Uber"></strong>
-                      </td>
-                      <td data-en="Door-to-door citywide" data-fr="Porte-à-porte dans toute la ville"></td>
-                      <td data-en="$8-15 per ride" data-fr="8-15 $ par trajet"></td>
-                      <td data-en="Late night, convenience" data-fr="Tard le soir, commodité"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-              <div class="logistics-info">
-                <h4 data-en="Transit Tips" data-fr="Conseils de transport"></h4>
-                <ul>
-                  <li data-en="Download Transit App for real-time STTR bus arrivals and route planning" data-fr="Téléchargez l'application Transit pour les arrivées d'autobus STTR en temps réel et la planification d'itinéraires"></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
+      <div class="hero-panel" id="heroPanel">
+        <div class="container hero-panel-inner">
+          <p data-en="Join us for the Conference on Sustainability in Engineering (CSE), hosted at the University of Quebec at Trois-Rivières. This national event is dedicated to empowering the next generation of engineers to lead with responsibility and innovation. Over three days, you'll connect with passionate peers, attend thought-provoking talks, and participate in hands-on workshops—all focused on building a more sustainable future together."
+             data-fr="Participez au Congrès sur le développement durable en ingénierie (CDDI), organisé à l'Université du Québec à Trois-Rivières. Cet événement national vise à outiller la prochaine génération d'ingénieur·e·s pour qu'elle innove et agisse avec responsabilité. Pendant trois jours, rencontrez des pairs engagé·e·s, assistez à des conférences inspirantes et prenez part à des ateliers pratiques, tous axés sur la construction d'un avenir plus durable.">
+          </p>
+          <a class="btn" href="delegates.html" data-en="Register Now" data-fr="Inscrivez-vous"></a>
+          <a class="btn" href="about.html" data-en="Learn More" data-fr="En savoir plus"></a>
         </div>
       </div>
-    </section>
-  
-<section class="things-to-do-section">
-  <div class="container">
-    <h2 data-en="Things to Do in Trois-Rivières in Early March" data-fr="Choses à faire à Trois-Rivières en début mars"></h2>
-    <p class="section-intro" data-en="Embrace the crisp winter charm of Trois-Rivières in early March with a mix of indoor cultural gems and outdoor adventures. From historic prisons to scenic river walks, here’s how to make the most of your visit during this transitional season." data-fr="Profitez du charme hivernal de Trois-Rivières en début mars avec un mélange de trésors culturels en intérieur et d'aventures en plein air. Des prisons historiques aux promenades fluviales, voici comment tirer le meilleur parti de votre visite durant cette saison."></p>
+
+    </div>
+  </section>
+
+  <section class="updates">
+    <div class="updates-container">
+      <h2 data-en="Latest Updates" data-fr="Dernières nouvelles"></h2>
+      <div class="carousel">
+        <div class="carousel-inner">
+
+        <!-- Volunteer -->
+        <div class="carousel-item active">
+          <h3 
+            data-en="Bring the Vision to Life — Volunteer at CSE 2026!" 
+            data-fr="Donnez vie à la vision — Bénévoles recherché·e·s pour la CDDI 2026 !">
+          </h3>
+          <p 
+            data-en="Be at the heart of the action by joining the volunteer team behind CSE 2026. Contribute to a landmark event, connect with passionate students from across the country, and develop valuable skills that last long after the final keynote." 
+            data-fr="Plongez au cœur de l'action en rejoignant l'équipe bénévole de la CDDI 2026. Contribuez à un événement marquant, rencontrez des étudiant·e·s engagé·e·s de partout au pays et développez des compétences précieuses qui vous suivront bien au-delà du congrès.">
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Become a Volunteer" data-fr="Devenez bénévole"></a>
+        </div>
+
+        <!-- Become a speaker -->
+        <div class="carousel-item">
+          <h3 
+            data-en="Share Your Expertise — Become a Speaker" 
+            data-fr="Partagez votre expertise — Devenez conférencier·ère">
+          </h3>
+          <p 
+            data-en="Inspire the next generation of engineers. If you're passionate about sustainability and innovation, we'd love to have you speak at CSE 2026." 
+            data-fr="Inspirez la prochaine génération d'ingénieur·e·s. Si vous êtes passionné·e par la durabilité et l'innovation, nous aimerions vous avoir comme conférencier·ère à la CDDI 2026."></p>
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Get in Touch" data-fr="Nous contacter"></a>
+        </div>
+
+        <!-- Become a partner -->
+        <div class="carousel-item">
+          <h3 
+            data-en="Connect With Tomorrow's Leaders — Partner With Us" 
+            data-fr="Rencontrez la relève — Devenez notre partenaire">
+          </h3>
+          <p 
+            data-en="Showcase your organization at the forefront of sustainability and innovation. By partnering with CSE 2026, you'll engage with ambitious student leaders, highlight your commitment to the future of engineering, and take part in a one-of-a-kind national gathering." 
+            data-fr="Mettez en valeur votre organisation au cœur des enjeux d'innovation et de durabilité. En vous associant à la CDDI 2026, vous entrerez en contact avec une relève étudiante ambitieuse, affirmerez votre engagement envers l'ingénierie de demain et participerez à un rassemblement unique à l'échelle nationale.">
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Let's Collaborate" data-fr="Entrons en collaboration"></a>
+        </div>
+
+        <!-- Join the organizing committee -->
+        <div class="carousel-item">
+          <h3 
+            data-en="Lead the Movement — Join the CSE 2026 Organizing Committee" 
+            data-fr="Prenez les devants — Intégrez l'équipe du comité organisateur de la CDDI 2026">
+          </h3>
+          <p 
+            data-en="We're looking for bold and strategic minds to help organize CSE 2026. Step into the role of VP Partnerships, VP Logistics, or one of several director positions to support the team. Take charge of building innovative collaborations, managing event operations, growing your network, and shaping an event that will resonate across Canada." 
+            data-fr="Nous cherchons des esprits audacieux pour contribuer à l'organisation de la CDDI 2026. Prenez les rênes comme VP Partenariat, VP Logistique ou l'un des plusieurs postes de directeur·rice·s pour prêter main‑forte à l'équipe. Créez des collaborations innovantes, gérez les opérations de l'événement, élargissez votre réseau et façonnez un événement à portée nationale."></p>
+          </p>
+          <a class="btn" href="contact.html" 
+            data-en="Apply" data-fr="Postulez"></a>
+        </div>
+
+          <!-- Stay posted for updates (last card) -->
+          <div class="carousel-item">
+            <h3 data-en="Stay posted for updates!" 
+              data-fr="Restez à l'affût des mises à jour !"></h3>
+            <p data-en="The website is under construction, but we are working hard to bring you the latest information about the upcoming event. Stay tuned for more details on speakers, workshops, and networking opportunities."
+               data-fr="Le site web est en construction, mais nous travaillons fort pour vous offrir les dernières informations sur le congrès. Restez à l'écoute pour plus de détails sur les conférenciers, les ateliers et les occasions de réseautage."></p>
+            <img src="./assets/img/logo.png" alt="Under Construction" class="construction-image">
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-indicator active" data-index="0"></div>
+        <div class="carousel-indicator" data-index="1"></div>
+        <div class="carousel-indicator" data-index="2"></div>
+        <div class="carousel-indicator" data-index="3"></div>
+        <div class="carousel-indicator" data-index="4"></div>
+      </div>
+    </div>
+  </section>
     
-    <div class="things-to-do-accordion">
-
-      <!-- Historical & Cultural Sites -->
-      <div class="accordion-item" data-category="historical">
-        <div class="accordion-header">
-          <i class="fas fa-landmark"></i>
-          <h3 data-en="Historical & Cultural Sites" data-fr="Sites historiques et culturels"></h3>
-          <i class="fas fa-chevron-down accordion-arrow"></i>
+  <section class="key-details">
+    <div class="container">
+      <h2 data-en="Key Informations" data-fr="Informations clés"></h2>
+      <div class="details-grid">
+        <div class="detail-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Date</h3>
+            <p data-en="Feb 27 – Mar 1, 2026" data-fr="Du 27 février au 1er mars 2026"></p>
         </div>
-        <div class="accordion-content">
-          <div class="activity-grid">
-            <div class="activity-card">
-              <h4 data-en="Vieille Prison de Trois-Rivières" data-fr="Vieille Prison de Trois-Rivières"></h4>
-              <p data-en="Step into Canada’s penal history at this 19th-century prison turned museum, offering gripping tours led by former inmates." data-fr="Plongez dans l'histoire pénitentiaire canadienne dans cette prison du XIXe siècle transformée en musée, avec des visites captivantes animées par d'anciens détenus."></p>
+        <div class="detail-card">
+          <i class="fas fa-clock"></i>
+          <h3 data-en="Countdown" data-fr="Compte à rebours"></h3>
+          <p data-en="The conference begins in:" data-fr="Le congrès commence dans :"></p>
+          <div class="countdown" id="countdown-timer">
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">0</span>
+              <span data-en="Days" data-fr="Jours"></span>
             </div>
-            <div class="activity-card">
-              <h4 data-en="Boréalis Museum" data-fr="Musée Boréalis"></h4>
-              <p data-en="Discover Trois-Rivières’ industrial past in the pulp and paper industry through interactive exhibits and hands-on paper-making workshops." data-fr="Découvrez le passé industriel de Trois-Rivières dans l'industrie des pâtes et papiers grâce à des expositions interactives et des ateliers de fabrication de papier."></p>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">0</span>
+              <span data-en="Hours" data-fr="Heures"></span>
             </div>
-            <div class="activity-card">
-              <h4 data-en="Notre-Dame-du-Cap Basilica" data-fr="Basilique Notre-Dame-du-Cap"></h4>
-              <p data-en="A serene spiritual retreat with stunning stained-glass windows, candlelit processions, and a riverside setting." data-fr="Un lieu spirituel paisible avec de magnifiques vitraux, des processions aux chandelles et un cadre riverain."></p>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">0</span>
+              <span data-en="Mins" data-fr="Mins"></span>
             </div>
-            <div class="activity-card">
-              <h4 data-en="Boucher-De Niverville Manor" data-fr="Manoir Boucher-De Niverville"></h4>
-              <p data-en="Explore 18th-century bourgeois life in New France through guided tours of this beautifully preserved stone manor." data-fr="Découvrez la vie bourgeoise du XVIIIe siècle en Nouvelle-France grâce aux visites guidées de ce manoir en pierre magnifiquement préservé."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Amphithéâtre Cogeco" data-fr="Amphithéâtre Cogeco"></h4>
-              <p data-en="A world-class outdoor amphitheater hosting concerts, Cirque du Soleil tributes, and winter cabaret shows. Capacity: 9,000 (3,500 seated). Stunning riverside location at the confluence of the St. Lawrence and Saint-Maurice rivers." data-fr="Amphithéâtre extérieur de calibre mondial accueillant concerts, hommages au Cirque du Soleil et cabarets hivernaux. Capacité : 9 000 (3 500 assis). Emplacement riverain exceptionnel au confluent du Saint-Laurent et de la Saint-Maurice."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Vieux Port & St. Lawrence River Walk" data-fr="Vieux Port & Promenade du Fleuve Saint-Laurent"></h4>
-              <p data-en="Scenic waterfront stroll with views of ice floes in March, historic docks, and the iconic Laviolette Bridge. The boardwalk connects to downtown attractions and Île Saint-Quentin." data-fr="Promenade panoramique le long du fleuve avec vue sur les glaces en mars, quais historiques et le pont Laviolette. La passerelle relie le centre-ville et l'île Saint-Quentin."></p>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">0</span>
+              <span data-en="Secs" data-fr="Secs"></span>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Nature & Outdoor Activities -->
-      <div class="accordion-item" data-category="nature">
-        <div class="accordion-header">
-          <i class="fas fa-leaf"></i>
-          <h3 data-en="Nature & Winter Activities" data-fr="Nature et activités hivernales"></h3>
-          <i class="fas fa-chevron-down accordion-arrow"></i>
-        </div>
-        <div class="accordion-content">
-          
-          <div class="activity-grid">
-            <div class="activity-card">
-              <h4 data-en="Parc de l’Île Saint-Quentin" data-fr="Parc de l’Île Saint-Quentin"></h4>
-              <p data-en="Winter hiking, snowshoeing, and skating on the St. Maurice River, with heated yurts for warming up." data-fr="Randonnée hivernale, raquette et patinage sur la rivière Saint-Maurice, avec des yourtes chauffées pour se réchauffer."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Lac-Saint-Pierre Biosphere Reserve" data-fr="Réserve de biosphère du Lac-Saint-Pierre"></h4>
-              <p data-en="Spot migratory birds and explore snowy wetlands in this UNESCO-recognized natural haven." data-fr="Observez les oiseaux migrateurs et explorez les zones humides enneigées dans ce havre naturel reconnu par l'UNESCO."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Domaine Enchanteur" data-fr="Domaine Enchanteur"></h4>
-              <p data-en="Skate through enchanting forest trails on groomed ice paths, illuminated at night for a magical experience." data-fr="Patinez sur des sentiers forestiers enchantés, illuminés la nuit pour une expérience magique."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Parc national de la Mauricie" data-fr="Parc national de la Mauricie"></h4>
-              <p data-en="A 45-minute drive from downtown. Winter activities include snowshoeing on frozen lakes, cross-country skiing on 80km of trails, and wildlife spotting (moose, beavers). Visitor center open year-round." data-fr="À 45 minutes du centre-ville. Activités hivernales : raquette sur lacs gelés, ski de fond (80 km de sentiers) et observation de la faune (orignaux, castors). Centre d'accueil ouvert toute l'année."></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Arts & Seasonal Events -->
-      <div class="accordion-item" data-category="arts">
-        <div class="accordion-header">
-          <i class="fas fa-palette"></i>
-          <h3 data-en="Arts & Seasonal Events" data-fr="Arts et événements saisonniers"></h3>
-          <i class="fas fa-chevron-down accordion-arrow"></i>
-        </div>
-        <div class="accordion-content">
-          <div class="activity-grid">
-            <div class="activity-card">
-              <h4 data-en="Musée POP" data-fr="Musée POP"></h4>
-              <p data-en="Interactive exhibits on Québécois pop culture, from circus history to prison life—perfect for families." data-fr="Expositions interactives sur la culture populaire québécoise, de l'histoire du cirque à la vie en prison — idéal pour les familles."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Galerie d’Art du Parc" data-fr="Galerie d’Art du Parc"></h4>
-              <p data-en="Rotating exhibitions of local and international artists in a historic 18th-century manor." data-fr="Expositions temporaires d'artistes locaux et internationaux dans un manoir historique du XVIIIe siècle."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Trois-Rivières Lions Hockey" data-fr="Hockey des Lions de Trois-Rivières"></h4>
-              <p data-en="Cheer for the 2025 Kelly Cup champions! The ECHL affiliate of the Montreal Canadiens offers thrilling games at Colisée Vidéotron." data-fr="Encouragez les champions 2025 de la Kelly Cup ! L’affilié ECHL des Canadiens de Montréal propose des matchs électrisants au Colisée Vidéotron."></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Food & Warm Delights -->
-      <div class="accordion-item" data-category="food">
-        <div class="accordion-header">
-          <i class="fas fa-utensils"></i>
-          <h3 data-en="Food & Warm Delights" data-fr="Gastronomie et réconfort hivernal"></h3>
-          <i class="fas fa-chevron-down accordion-arrow"></i>
-        </div>
-        <div class="accordion-content">
-          <div class="activity-grid">
-            <div class="activity-card">
-              <h4 data-en="Maple Season Treats" data-fr="Délices de la saison des sucres"></h4>
-              <p data-en="Indulge in maple taffy, sugar pie, and hearty cabane à sucre meals at Le Sacristain or local sugar shacks. Try their maple-glazed ham or oreilles de crisse (fried pork rinds)." data-fr="Régalez-vous avec de la tire d'érable, de la tarte au sucre et des repas copieux de cabane à sucre au Sacristain ou dans les érablières locales. Ne manquez pas leur jambon à l’érable ou les oreilles de crisse."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Poivre Noir" data-fr="Poivre Noir"></h4>
-              <p data-en="Upscale French cuisine with molecular gastronomy twists. Their 5-course tasting menu (with wine pairings) features foie gras and Québec venison, perfect for a romantic evening." data-fr="Cuisine française haut de gamme avec des touches de gastronomie moléculaire. Leur menu dégustation 5 services (avec accords mets-vins) met à l'honneur le foie gras et le venaison du Québec, idéal pour une soirée romantique."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Le Temps d'une Pinte" data-fr="Le Temps d'une Pinte"></h4>
-              <p data-en="A worker-owned microbrewery serving inventive dishes like Scotch eggs and guinea fowl wings, paired with house-brewed beers. Cozy retro vibe." data-fr="Microbrasserie coopérative proposant des plats originaux comme des œufs écossais et des ailes de pintade, accompagnés de bières artisanales. Ambiance rétro et chaleureuse."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Bistro Chasse-Galerie" data-fr="Bistro Chasse-Galerie"></h4>
-              <p data-en="The ultimate campus hotspot—right on the UQTR grounds and beloved by every engineering student in Trois-Rivières. Famous for its lively atmosphere, legendary 'giraffes' (towers of the local Prestone drink: Rev, energy drink, Smirnoff Ice, and Pabst), and classic comfort food. Don’t miss their poutine with local cheese curds or maple-glazed salmon, best enjoyed with a Le Trou du Diable craft beer."
-                data-fr="Le lieu incontournable du campus de l’UQTR, adoré par tous les étudiant·e·s en génie de Trois-Rivières. Ambiance festive, célèbres « girafes » (tours du cocktail local Prestone : Rev, boisson énergisante, Smirnoff Ice et Pabst) et plats réconfortants. Ne manquez pas leur poutine au fromage en grains ou le saumon à l’érable, à savourer avec une bière du Trou du Diable."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="La Maison de Débauche" data-fr="La Maison de Débauche"></h4>
-              <p data-en="Festive bistro with duck confit poutine and the best sangria in town. Generous portions in a stylish, intimate setting."
-                data-fr="Bistro festif proposant une poutine au confit de canard et la meilleure sangria en ville. Portions généreuses dans un cadre élégant et chaleureux."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Le Buck" data-fr="Le Buck"></h4>
-              <p data-en="Modern Québécois cuisine highlighting local terroir: forest mushrooms, Québec cheeses, and microbrew beers. Ask about their seasonal game dishes."
-                data-fr="Cuisine québécoise moderne mettant en valeur le terroir : champignons sauvages, fromages d’ici et bières de microbrasseries. Demandez leurs plats de gibier de saison."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Vieux Port Restaurants" data-fr="Restaurants du Vieux Port"></h4>
-              <p data-en="Waterside dining with views of ice floes in March. Try seafood at Le Rouge Vin or warm up with fondue at a cozy café along the St. Lawrence."
-                data-fr="Repas au bord de l’eau avec vue sur les glaces du fleuve en mars. Dégustez des fruits de mer au Rouge Vin ou réchauffez-vous avec une fondue dans un café convivial du bord du Saint-Laurent."></p>
-            </div>
-            <div class="activity-card">
-              <h4 data-en="Mezcal Taqueria" data-fr="Mezcal Taqueria"></h4>
-              <p data-en="Immerse yourself in a Mexican street-food vibe with handmade corn tortillas, tacos (fish, chorizo, beef), and crispy flautas. Vegan options available. Pair with 150+ tequilas/mezcals or a house margarita."
-                data-fr="Plongez dans l’ambiance street-food mexicaine avec des tortillas de maïs maison, tacos (poisson, chorizo, bœuf) et flautas croustillantes. Options véganes disponibles. Plus de 150 tequilas/mezcals ou une margarita maison pour accompagner le tout."></p>
-            </div>
-          </div>
+        <div class="detail-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3 data-en="Location" data-fr="Lieu"></h3>
+            <p data-en="University of Quebec at Trois-Rivières" data-fr="Université du Québec à Trois-Rivières"></p>
+            <p data-en="3351 des Forges Blvd, Trois-Rivières, QC" data-fr="3351, boul. des Forges, Trois-Rivières, QC"></p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+    
+  <section class="sponsors">
+    <div class="container">
+      <h2 data-en="Official Sponsors" data-fr="Partenaires officiels"></h2>
+      <div class="sponsor-logos">
+        <a href="#"><img src="./assets/img/sponsors/uqtr.png" alt="UQTR"></a>
+      </div>
+      <a class="btn" href="sponsors.html" data-en="View All Sponsors" data-fr="Voir tous nos partenaires"></a>
+    </div>
+  </section>
 
-        <div class="tourism-note">
-          <div class="note-content">
-            <i class="fas fa-info-circle"></i>
-            <div class="note-text">
-              <p data-en="For detailed information about attractions, hours, and current events, visit the official Trois-Rivières tourism website."
-                data-fr="Pour des informations détaillées sur les attractions, les horaires et les événements en cours, visitez le site officiel du tourisme de Trois-Rivières."></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section class="faq-section">
-      <div class="container">
-        <h2 data-en="Frequently Asked Questions" data-fr="Foire aux questions"></h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question" data-en="How can I register?" data-fr="Comment puis-je m'inscrire ?"></div>
-            <div class="faq-answer" data-en="To register, you must contact the official delegate or representative at your school. They will provide you with the necessary instructions and registration forms. If you are unsure who your representative is, reach out to your student association or the event organizers for assistance." data-fr="Pour vous inscrire, vous devez contacter le ou la délégué·e officiel·le ou représentant·e de votre école. Il ou elle vous fournira les instructions et les formulaires d'inscription nécessaires. Si vous ne savez pas qui est votre représentant·e, contactez votre association étudiante ou les organisateurs de l'événement pour obtenir de l'aide."></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" data-en="Where can I find the schedule?" data-fr="Où puis-je trouver l'horaire ?"></div>
-            <div class="faq-answer">
-              <span data-en="A general overview of the conference schedule, including key events and activities, is available"
-                  data-fr="Un aperçu général de l'horaire du congrès, incluant les principaux événements et activités, est disponible"></span>
-              <a href='schedule.html'><span data-en="here" data-fr="ici"></span></a>.
-              <span data-en="The detailed day-by-day schedule, with session times and locations, will be included in the Delegate Package, which will be available for download on this website before the event." 
-                  data-fr="L'horaire détaillé, avec les heures et lieux des séances, sera inclus dans la trousse du·de la délégué·e, qui sera disponible en téléchargement sur ce site web avant l'événement."></span>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" data-en="Where can I find the presentation slides?" data-fr="Où puis-je trouver les diapositives de présentation ?"></div>
-            <div class="faq-answer" data-en="Presentation slides from workshops and sessions will be made available to delegates after the event, either through email or a dedicated online portal. Details on how to access these materials will be communicated during the conference." data-fr="Les diapositives des ateliers et des séances seront mises à la disposition des délégué·e·s après l'événement, soit par courriel, soit via un portail en ligne dédié. Les modalités d'accès à ces documents seront communiquées pendant le congrès."></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" data-en="Is there a veggie option?" data-fr="Y a-t-il une option végétarienne ?"></div>
-            <div class="faq-answer" data-en="Yes, vegetarian meal options will be available throughout the event. Please indicate any dietary restrictions or preferences when you register, so we can accommodate your needs." data-fr="Oui, des options végétariennes seront offertes pendant toute la durée de l'événement. Veuillez indiquer toute restriction ou préférence alimentaire lors de votre inscription afin que nous puissions répondre à vos besoins."></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" data-en="Where should I be when I arrive?" data-fr="Où dois-je être à mon arrivée ?"></div>
-            <div class="faq-answer" data-en="Upon arrival, delegates should proceed to the registration desk, which will be clearly marked at the main entrance of the venue. There, you will check in, receive your delegate kit, and get directions for the opening session. More details and a map will be provided in the Delegate Package." data-fr="À votre arrivée, présentez-vous au bureau d'inscription, qui sera clairement indiqué à l'entrée principale du site. Vous y effectuerez votre enregistrement, recevrez votre trousse de délégué·e et obtiendrez les indications pour la séance d'ouverture. Plus de détails et un plan seront fournis dans la trousse du·de la délégué·e."></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" data-en="What time should I arrive?" data-fr="À quelle heure devrais-je arriver ?"></div>
-            <div class="faq-answer" data-en="Delegates are encouraged to arrive at least 30 minutes before the official start of the event to allow time for registration and to settle in. The exact start time will be communicated in the Delegate Package and on the event website closer to the date." data-fr="Il est recommandé aux délégué·e·s d'arriver au moins 30 minutes avant le début officiel de l'événement afin de procéder à l'inscription et de s'installer. L'heure exacte de début sera communiquée dans la trousse du·de la délégué·e et sur le site web de l'événement à l'approche de la date."></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" data-en="Where can I find more information?" data-fr="Où puis-je trouver plus d'informations ?"></div>
-            <div class="faq-answer">
-              <span data-en="All essential information for delegates, including preparation tips, schedules, and important updates, will be included in the documents available for download from"
-                    data-fr="Toutes les informations essentielles pour les délégué·e·s, y compris des conseils de préparation, les horaires et les mises à jour importantes, seront incluses dans les documents téléchargeables"></span>
-              <a href='delegates.html'><span data-en="here" data-fr="ici"></span></a>.
-              <span data-en="A preliminary Pre-Delegate Package will be published around mid-fall, and a comprehensive Delegate Package will be released a few weeks before the event. For urgent questions, contact your school representative or the organizing committee." 
-                    data-fr="Une trousse préliminaire pré-délégué·e sera publiée vers la mi-automne, et une trousse complète du·de la délégué·e sera disponible quelques semaines avant l'événement. Pour toute question urgente, contactez le ou la représentant·e de votre école ou le comité organisateur."></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <footer>
+  <footer>
     <div class="footer-content">
       <p data-en="&copy; 2026 CFES Conference. All rights reserved."
          data-fr="&copy; 2026 Congrès de la FCEG. Tous droits réservés.">
       </p>
       <a href="terms.html" class="footer-link"
         data-en="Terms of Use"
-        data-fr="Conditions d’utilisation">
+        data-fr="Conditions d'utilisation">
       </a>
     </div>
   </footer>
-
 </body>
 </html>
