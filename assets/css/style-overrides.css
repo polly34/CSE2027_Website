@@ -44,3 +44,96 @@ section.hero p {
   background: color-mix(in srgb, var(--cse-error) 8%, transparent) !important;
   border-left: 4px solid var(--cse-error) !important;
 }
+
+/* ===== Hero: photo background + rising panel ===== */
+:root{
+  --cse-purple:#6b1e49;
+  --cse-blue:#2b9dc3;
+  --cse-green:#2f8e17;
+  --cse-panel:rgba(28,28,30,.85);
+}
+
+#hero{
+  position: relative;
+  height: 220vh;
+}
+
+.hero-sticky{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.hero-bg::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.15) 100%);
+}
+
+.hero-header{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 3;
+  will-change: transform, opacity;
+}
+
+.hero-waves{ display:block; width:100%; height:auto; }
+.wave-purple{ fill: var(--cse-purple); }
+.wave-blue{ fill: var(--cse-blue); opacity:.9; }
+.wave-green{ fill: var(--cse-green); opacity:.92; }
+
+.hero-title-wrap{
+  position:absolute;
+  top: 16%;
+  left:50%;
+  transform: translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap: 1rem;
+}
+.hero-logo{ height: 64px; width:auto; }
+.hero-title-wrap h1{
+  color:#fff;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  margin:0;
+  text-shadow: 0 2px 12px rgba(0,0,0,.45);
+  white-space: nowrap;
+}
+
+.hero-panel{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--cse-panel);
+  transform: translateY(100%);
+  will-change: transform;
+  display:flex;
+  align-items:center;
+}
+.hero-panel-inner{
+  color:#fff;
+  text-align:center;
+  padding: 2rem 1.5rem;
+}
+.hero-panel-inner p{
+  max-width: 60ch;
+  margin: 0 auto 1.5rem;
+  line-height:1.6;
+}
+
+@media (max-width: 640px){
+  .hero-title-wrap{ flex-direction:column; text-align:center; top: 12%; }
+  .hero-logo{ height: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-header, .hero-panel{ transition:none !important; }
+}
