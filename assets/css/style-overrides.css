@@ -45,9 +45,11 @@ section.hero p {
   border-left: 4px solid var(--cse-error) !important;
 }
 
+/* Change colour of "Welcome to CSE"
 .hero h1 {
   color: var(--cse-purple);
 }
+*/
 
 .sponsor-logos img.logo-large {
   height: 120px;
