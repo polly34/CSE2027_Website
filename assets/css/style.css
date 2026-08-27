@@ -28,10 +28,13 @@ header > .container {
 header {
   padding: 0;
   position: relative;
-  background-color: var(--cse-blue);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+                     url('../img/CSE27-header-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-width: 350px;
 }
-
 /* Header content layout */
 .header-content {
   display: flex;
@@ -69,7 +72,7 @@ header {
 }
 
 .social-icon:hover {
-  color: var(--cse-orange);
+  color: var(--cse-purple);
   transform: scale(1.1);
 }
 
@@ -92,7 +95,7 @@ header {
 
 /* Main navigation styles */
 .main-nav {
-  background-color: var(--cse-teal);
+  background-color: rgba(86, 86, 86, 0.7);
   width: 100%;
 }
 
@@ -125,11 +128,11 @@ header {
 
 .main-nav a.current,
 .main-nav a.current:visited {
-  color: var(--cse-orange);
+  color: var(--cse-blue);
 }
 
 .main-nav a:hover {
-  color: var(--cse-orange);
+  color: var(--cse-blue);
 }
 
 /* Hero section */

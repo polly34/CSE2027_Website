@@ -10,13 +10,15 @@
   --cse-teal: #008080;
   --cse-orange: #FF7A00;
   --cse-green: #00760F;
-  --cse-blue: #000080;
+  --cse-blue: #2b9dc3;
   --cse-success: #28a745;
   --cse-error: #FF0000;
   --cse-white: #ffffff;
   --cse-light-gray: #f6f6f6;
   --cse-gray: #606060;
   --cse-black: #000000;
+  --cse-purple: #6b1e49;
+
 
   /* === TITLES === */
   --cse-title-font: 'Roboto Condensed', sans-serif;
