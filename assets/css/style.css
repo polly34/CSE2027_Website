@@ -157,7 +157,7 @@ header {
 /* Hero background logo overlay */
 .hero::before {
   content: "";
-  background: url('../img/logo.png') no-repeat center center;
+  background: url('../img/cse27-logo.png') no-repeat center center;
   background-size: contain;
   position: absolute;
   top: 0;
@@ -166,8 +166,8 @@ header {
   bottom: 0;
   opacity: 0.5;
   z-index: -1;
-  max-width: 600px;
-  max-height: 400px;
+  max-width: 800px;
+  max-height: 600px;
   margin: auto;
 }
 
@@ -232,7 +232,7 @@ header {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 2rem;
-  background: var(--cse-orange);
+  background: var(--cse-blue);
   color: var(--cse-white);
   border: none;
   border-radius: 6px;
@@ -287,7 +287,7 @@ footer {
 
 .footer-link:hover {
   text-decoration: underline;
-  color: var(--cse-orange);
+  color: var(--cse-blue);
 }
 
 /* Mobile layout: stack items and center */
@@ -302,9 +302,9 @@ footer {
 
 /* Language Toggle Button */
 #lang-toggle {
-  background: var(--cse-white);
+  background: rgba(255, 255, 255, 0.35);
   color: var(--cse-blue);
-  border: 2px solid var(--cse-blue);
+  border: 2px solid rgba(255, 255, 255, 0.35);
   padding: 0.4rem 1rem;
   font-family: var(--cse-subtitle-font);
   font-weight: 600;
@@ -313,9 +313,9 @@ footer {
 }
 
 #lang-toggle:hover {
-  background-color: var(--cse-orange);
+  background-color: var(--cse-blue);
   color: var(--cse-white);
-  border-color: var(--cse-orange);
+  border-color: var(--cse-blue);
 }
 
 /* Responsive: Mobile styles */
