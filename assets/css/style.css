@@ -186,8 +186,13 @@ header {
 /* Hero title */
 .hero h1 {
   font-family: var(--cse-title-font);
-  color: var(--cse-title-color);
-  font-size: var(--cse-title-size);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, var(--cse-purple), var(--cse-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
   text-align: var(--cse-title-align);
   margin: var(--cse-title-margin);
 }
@@ -261,7 +266,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--cse-blue);
+  background-color: var(--cse-purple);
   min-width: 350px;
 }
 
