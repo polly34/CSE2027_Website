@@ -78,3 +78,46 @@ section.hero p {
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
   }
+
+
+  /* Logo page: hide the faint watermark, show the real logo below text */
+
+.logo-showcase {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+}
+
+.logo-showcase img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+.logo-page::before {
+  content: none;
+}
+section.logo-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-showcase {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0 3rem;
+  background: none;
+  box-shadow: none;
+}
+
+.logo-showcase img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+.logo-page .container {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 3rem 1rem 1rem;
+}
