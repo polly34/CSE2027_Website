@@ -220,6 +220,8 @@ header {
   margin: var(--cse-subtitle2-margin);
 }
 
+
+
 /* Hero paragraph */
 .hero p {
   font-family: var(--cse-body-font);

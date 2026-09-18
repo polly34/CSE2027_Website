@@ -244,3 +244,9 @@ header {
 html, body {
   overflow-x: hidden;
 }
+
+.sponsor-logos img.logo-official-index {
+  height: 110px;
+  width: auto;
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
