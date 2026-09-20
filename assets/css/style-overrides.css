@@ -250,3 +250,16 @@ html, body {
   width: auto;
   /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
+.sponsor-logoss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.logo-official-index {
+  width: 450px;
+  height: auto;
+}
