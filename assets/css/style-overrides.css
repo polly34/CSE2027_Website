@@ -248,6 +248,7 @@ html, body {
 .sponsor-logos img.logo-official-index {
   height: 110px;
   width: auto;
+  margin: 10px 0;
   /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
@@ -256,9 +257,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;   /* ← new line for space below */
 }
-
 .logo-official-index {
   width: 450px;
   height: auto;
